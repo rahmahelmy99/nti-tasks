@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Customer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<section class="container my-5">
+    <div class="d-flex justify-content-end mb-3">
+        <a href="allCustomer.html" class="btn btn-primary">All Customer</a>
+    </div>
+    <div>
+        <form id="addCustomer">
+            
+            <div class="mb-3">
+                <label>Account Number</label>
+                <input class="form-control" style="resize: none;" rows="3" placeholder="Account Number" name="accNum">
+            </div> 
+
+            <div class="mb-3">
+                <label>Name</label>
+                <input placeholder="Name" class="form-control" name="customerName">
+            </div>
+
+            <div class="mb-3">
+                <label>Balance</label>
+                <input placeholder="Balance" class="form-control" name="customerBalance">
+            </div>
+            <div class="mb-3">
+                <label>Transaction</label>
+                <select class="form-select" aria-label="Default select example" name="customerTrans" id="transType">
+                <option selected disabled>Transaction Type</option>
+              </select>
+            </div>
+
+        <div class="mb-3">
+            <button class="btn btn-primary">Add Customer</button>
+        </div>
+        </form>
+    </div>
+</section>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="bank.js"></script>
+</body>
+</html>
