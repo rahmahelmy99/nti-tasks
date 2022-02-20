@@ -1,0 +1,37 @@
+{{>header}}
+{{>navbar}}
+
+{{!-- {{#if}}
+<div class="alert alert-danger">
+
+</div> 
+{{/if}}--}}
+
+    <form method="post">
+        <div class="mb-3">
+            <label>Account Number</label>
+            <input class="form-control"  style="resize: none;" rows="3" placeholder="Account Number" name="accNum" >
+        </div>
+        <div class="mb-3">
+            <label>Name</label>
+            <input class="form-control" placeholder="Name" name="name" >
+        </div>
+        <div class="mb-3">
+            <label>Balance</label>
+            <input class="form-control" placeholder="Balance" name="balance">
+        </div>
+        <div class="mb-3">
+            <label>Transaction</label>
+            <select class="form-select" aria-label="Default select example" name="transaction" id="transType">
+                <option value="add transaction">add Transaction</option>
+                <option value="withdraw">withdraw</option>
+                
+            </select>   
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary">Edit</button>
+        </div>
+    </form> 
+
+
+{{>footer}}

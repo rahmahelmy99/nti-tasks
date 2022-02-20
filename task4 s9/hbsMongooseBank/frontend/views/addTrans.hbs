@@ -1,0 +1,34 @@
+{{>header}}
+{{>navbar}}
+<form method="post" action="addTrans">
+    <button class="btn btn-success my-2">Add Transaction</button>
+</form>
+
+<table class="table table-bordered ">
+    <thead>
+        <tr>
+            <th>accNum</th>
+            <th>Date Of Transaction</th>
+            <th>Transaction</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#unless addTrans}}
+        <tr class="alert alert-danger text-center">    
+            <td colspan="4"> No Transaction Yet</td>
+        </tr>
+        {{else}}
+        {{#each customer.tarnsactions}}
+        <tr>
+            <td>{{this.accNum}}</td>
+            <td>{{this.date}}</td>
+            <td>{{this.type}}</td>
+            <td>
+                <a class="btn btn-danger" href="/delTrans/{{this.accNum}}">Delete</button>
+            </td>
+        </tr>
+        {{/each}}
+        {{/unless}}
+    </tbody>    
+</table>
+{{>footer}} 

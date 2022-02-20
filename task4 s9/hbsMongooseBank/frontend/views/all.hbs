@@ -1,0 +1,38 @@
+{{>header}}
+{{>navbar}}
+<form method="post" action="delAll">
+    <button class="btn btn-danger">Delete All</button>
+</form>
+
+<table class="table table-bordered my-4">
+    <thead>
+        <tr>
+            <th>AccNum</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Controls</th>
+        </tr>
+    </thead>
+<tbody>
+     {{#if isEmpty}}
+        <tr class="alert alert-danger text-center">
+            <td colspan="4">No Users Yet</td>
+        </tr>
+    {{else}}
+        {{#each allCustomers}}
+         <tr>
+            <td>{{this.accNum}}</td>
+            <td>{{this.name}}</td>
+             <td>{{this.balance}}</td>
+            <td>
+                <a href="/single/{{this.accNum}}" class="btn btn-success mx-2">Show</a>
+                <a href="/edit/{{this.accNum}}" class="btn btn-warning mx-2 ">Edit</a>
+                <a href="/addTrans/{{this.accNum}}" class="btn btn-primary mx-2" >Show Transaction</a>
+                <a href="/all/{{this.accNum}}" class="btn btn-danger mx-2">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    {{/if}}
+  </tbody>
+</table>
+{{>footer}}

@@ -1,0 +1,14 @@
+{{>header}}
+{{>navbar}}
+<div class="border border-3 border-primary p-3">
+    {{#if customer}}
+        {{customer.accNum}}<br>
+        {{customer.name}}<br>
+        {{customer.balance}}
+        {{customer.trans}}
+        
+    {{else}}
+        customer not found
+    {{/if}}
+</div>
+{{>footer}}
